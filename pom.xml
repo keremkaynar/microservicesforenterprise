@@ -23,5 +23,11 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 	</parent>
 	<modules>
 		<module>com.ex.administration.repository</module>
+		<module>com.ex.administration.config.server</module>
+		<module>com.ex.administration.service.registry</module>
+		<module>com.ex.administration.data.service</module>
+		<module>com.ex.administration.accounting</module>
+		<module>com.ex.administration.hr</module>
+		<module>com.ex.administration.management</module>
 	</modules>
 </project>
