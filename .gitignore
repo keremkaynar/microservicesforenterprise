@@ -1,0 +1,12 @@
+target
+bin
+.settings
+webjars
+node_modules
+.DS_Store
+*.bak
+*.bbprojectd
+*.log
+workspace
+logs
+typings
