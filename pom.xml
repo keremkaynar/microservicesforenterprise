@@ -19,15 +19,21 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.9.RELEASE</version>
+		<version>2.0.0.RELEASE</version>
 	</parent>
 	<modules>
-		<module>com.ex.administration.repository</module>
 		<module>com.ex.administration.config.server</module>
 		<module>com.ex.administration.service.registry</module>
-		<module>com.ex.administration.data.service</module>
+		<module>com.ex.administration.api.gateway</module>
 		<module>com.ex.administration.accounting</module>
 		<module>com.ex.administration.hr</module>
-		<module>com.ex.administration.management</module>
 	</modules>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
