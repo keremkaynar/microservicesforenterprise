@@ -1,9 +1,10 @@
 package com.ex.administration.hr.data.access;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
 import com.ex.administration.hr.data.model.Workshop;
 
-public interface WorkshopRepository extends CrudRepository<Workshop, Integer> {
-
+@Repository
+public interface WorkshopRepository extends PagingAndSortingRepository<Workshop, Integer> {
 }

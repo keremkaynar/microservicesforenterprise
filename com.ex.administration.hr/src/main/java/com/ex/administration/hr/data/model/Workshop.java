@@ -1,6 +1,7 @@
 package com.ex.administration.hr.data.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -20,10 +21,12 @@ public class Workshop {
 
   private String description;
 
+  private Date date;
+
   private String place;
 
   private double budget;
 
-  @ManyToMany
+  @ManyToMany(mappedBy = "joinedWorkshops")
   private List<Employee> joinedEmployees = new ArrayList<>();
 }

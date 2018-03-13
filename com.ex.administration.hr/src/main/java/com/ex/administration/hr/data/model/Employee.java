@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
@@ -25,9 +26,9 @@ public class Employee {
 
   private String address;
 
-  @OneToOne
+  @OneToOne(fetch = FetchType.EAGER)
   private Profile profile;
 
-  @ManyToMany
+  @ManyToMany(fetch = FetchType.EAGER)
   private List<Workshop> joinedWorkshops = new ArrayList<>();
 }

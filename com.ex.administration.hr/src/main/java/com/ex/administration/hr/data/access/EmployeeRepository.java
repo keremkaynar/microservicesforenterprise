@@ -1,12 +1,14 @@
 package com.ex.administration.hr.data.access;
 
-import java.util.Optional;
+import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
 import com.ex.administration.hr.data.model.Employee;
 
-public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
+@Repository
+public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Integer> {
 
-  Optional<Employee> findByEmployeeId(Integer employeeId);
+  List<Employee> findByLastName(String lastName);
 }
