@@ -15,17 +15,19 @@ import lombok.Data;
 @Data
 public class Profile {
 
-  @Id
-  @GeneratedValue
-  private Integer profileId;
+	@Id
+	@GeneratedValue
+	private Integer profileId;
 
-  private Date startingDate;
+	private Date startingDate;
 
-  private String jobPosition;
+	private String jobPosition;
 
-  @OneToOne(fetch = FetchType.EAGER)
-  private Employee employee;
+	private String departmentName;
 
-  @ManyToOne
-  private Employee superior;
+	@OneToOne(fetch = FetchType.EAGER)
+	private Employee employee;
+
+	@ManyToOne
+	private Employee superior;
 }
