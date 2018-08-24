@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hrpod
+spec:
+  containers:
+  - name: hrcontainer
+    image: hrimage:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080
