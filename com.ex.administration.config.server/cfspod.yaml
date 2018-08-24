@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cfspod
+spec:
+  containers:
+  - name: cfscontainer
+    image: cfsimage:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080
