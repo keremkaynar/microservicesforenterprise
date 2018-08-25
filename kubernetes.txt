@@ -1,0 +1,17 @@
+# For starting master node with flannel pod networking
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+# Then execute
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+ 
+# For installing flannel pod networking
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-rbac.yml
+
+# For allowing creation of pods in master node
+kubectl taint nodes --all node-role.kubernetes.io/master-
+
+# For turn off swap
+sudo swapoff -a 
