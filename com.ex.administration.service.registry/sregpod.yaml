@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sregpod
+  labels: 
+    app : sreg
+spec:
+  containers:
+  - name: sregcontainer
+    image: sregimage:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 8080

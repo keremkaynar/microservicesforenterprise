@@ -1,0 +1,9 @@
+1. Setup git, mvn, jdk8, eclipse +
+2. Clone microservices code from git repository +
+3. Import micoservices mvn projects into eclipse +
+4. Setup docker environment on Ubuntu +
+5. Integrate maven docker plugin into hr project and form docker image for hr microservice +
+6. Install kubernetes and run hr docker container on kubernetes +
+7. Build Spring configuration server microservice, create docker from it and check that it is serving configurations (e.g., via /hr/default) + 
+8. Create Eureka service registry microservice and adjust hr and configuration server microservices to find each other
+
